@@ -1,7 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname diff) (read-case-sensitive #t) (teachpacks ((lib "drawings.ss" "installed-teachpacks"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "drawings.ss" "installed-teachpacks")) #f)))
-
 ; ------------------------------------------------------------------------------
 ; Simplified "diff" in Scheme (line-based)
 ;
@@ -73,24 +72,7 @@
       )
     ))
 
-
-
-(diff
-
- (list
-  ""
-  "This program computes the longest common subsequence."
-  "The algorithm is recursive."
-  "It compares characters one by one."
-  "The result is returned as a string."
-  "End of the program.")
- (list
-  ""
-  "This program computes the longest common subsequence."
-  "The algorithm is recursive."
-  "It compares strings line by line."
-  "The result is returned as a list."
-  "End of the program."))
+(diff (list "ciao" "come" "stai" "?") (list "ciao" "michael" "come" "va?" ))
 
 
 #|
