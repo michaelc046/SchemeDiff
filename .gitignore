@@ -1,3 +1,4 @@
 *.rkt~
 *.log
 .DS_Store
+*.bak
