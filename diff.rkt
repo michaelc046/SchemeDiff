@@ -51,8 +51,8 @@
   (lambda (t1 i t2 j) ;t1,t2: list of strings i,j: index
     (cond    
       ((and (null? t1) (null? t2)) '() ) ;CASE 1
-      ((and (null? t1) (not (null? t2))) (cons (list i 'a (+ j 1) (car t2)) (diff-rec t1 i (cdr t2) (+ j 1)))) ;CASE 2
-      ((and (not (null? t1)) (null? t2)) (cons (list (+ i 1) 'd j (car t1)) (diff-rec (cdr t1) (+ i 1) t2 j))) ;CASE 3
+      (null? t1) (cons (list i 'a (+ j 1) (car t2)) (diff-rec t1 i (cdr t2) (+ j 1)))) ;CASE 2
+      (null? t2) (cons (list (+ i 1) 'd j (car t1)) (diff-rec (cdr t1) (+ i 1) t2 j))) ;CASE 3
       ((string=? (car t1) (car t2)) (diff-rec (cdr t1) (+ i 1) (cdr t2) (+ j 1))) ;CASE 4
       (else (shorter+ 
              (cons (list (+ i 1) 'd j (car t1)) ;CASE 5A
